@@ -3,8 +3,8 @@ import { createContainer } from 'meteor/react-meteor-data';
 import { Links } from '../../imports/collections/links';
 
 class LinkList extends React.Component {
-  renderRows() {
-    this.props.links.map(link => {
+  renderRows = () => {
+    return this.props.links.map(link => {
       const { url, clicks, token } = link;
       const shortLink = `http://localhost:3000/${token}`;
 
